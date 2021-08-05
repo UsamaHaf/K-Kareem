@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="canvasolutions.kreemcabs.drivers.activity.ForgotPasswor">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+
+            <TextView
+                android:id="@+id/title_forgot"
+                android:layout_marginTop="5dp"
+                android:textSize="30sp"
+                android:textColor="@color/colorLogoBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_nyour_password"/>
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal">-->
+            <!--                <com.hbb20.CountryCodePicker-->
+            <!--                    android:id="@+id/country_code_forgot"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="3"-->
+            <!--                    app:ccp_showFlag="false"-->
+            <!--                    android:gravity="bottom"-->
+            <!--                    app:ccp_autoDetectCountry="true"-->
+            <!--                    app:ccp_areaCodeDetectedCountry="false"-->
+            <!--                    android:layout_gravity="bottom|center_horizontal"-->
+            <!--                    app:ccpDialog_allowSearch="true"-->
+            <!--                    app:ccp_showNameCode="false"-->
+            <!--                    app:ccp_showFullName="false"-->
+            <!--                    app:ccp_showPhoneCode="true"-->
+            <!--                    android:layout_marginStart="5dp"-->
+            <!--                    android:layout_marginEnd="5dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_marginBottom="2dp"-->
+            <!--                    android:focusable="true"-->
+            <!--                    app:ccp_autoDetectLanguage="true"-->
+            <!--                    android:focusedByDefault="true"-->
+            <!--                    app:ccpDialog_showFlag="false"-->
+            <!--                    app:ccpDialog_showCloseIcon="false"-->
+            <!--                    app:ccpDialog_textColor="@color/colorBlack"-->
+            <!--                    app:ccp_textSize="16sp"-->
+            <!--                    app:ccpDialog_keyboardAutoPopup="false"-->
+            <!--                    app:ccpDialog_background="@color/white"-->
+            <!--                    />-->
+
+
+            <!--                <com.google.android.material.textfield.TextInputLayout-->
+            <!--                    android:id="@+id/input_layout_phone_forgot"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1">-->
+
+            <!--                    <EditText-->
+            <!--                        android:maxLength="15"-->
+            <!--                        android:drawableTint="@color/colorLogoBlack"-->
+            <!--                        android:drawableEnd="@drawable/ic_phone_outline"-->
+            <!--                        android:textSize="16sp"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:id="@+id/phone_forgot"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:inputType="phone"-->
+            <!--                        android:hint="@string/phone" />-->
+            <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            </LinearLayout>-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_email_forgot"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:drawableTint="@color/colorLogoBlack"
+                    android:drawableRight="@drawable/ic_message_outline"
+                    android:textSize="16sp"
+                    android:id="@+id/email_forgot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="45dp"
+                android:paddingRight="45dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:id="@+id/forgot"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_button"
+                android:text="@string/send"
+                android:textColor="@color/colorLogoBlack"/>
+            <ProgressBar
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                android:id="@+id/progressBar_forgot"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

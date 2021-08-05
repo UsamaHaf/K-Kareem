@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="canvasolutions.kreemcabs.drivers.activity.LoginActivity"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="@color/colorWhite">
+
+  <LinearLayout
+      android:layout_margin="15dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_front"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"
+        android:textColor="@color/colorLogoBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_a_front_photo_of_your_national_id_card" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:background="?android:selectableItemBackground"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="13sp"
+        android:id="@+id/message_front"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_a_good_picture_of_your_driver_s_license_all_the_necessary_information_must_come_out_in_the_photo" />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/ni_photo_front"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"/>
+
+    <ProgressBar
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/progressBar_login_front"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+  </LinearLayout>
+
+<!--  <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--      android:elevation="2dp"-->
+<!--      app:backgroundTint="@color/colorLogoBlack"-->
+<!--      android:id="@+id/button_next_front"-->
+<!--      android:layout_marginBottom="30dp"-->
+<!--      android:layout_centerHorizontal="true"-->
+<!--      android:layout_above="@+id/layout_button_choose_front"-->
+<!--      android:tint="@color/colorWhite"-->
+<!--      android:src="@drawable/ic_arrow_right"-->
+<!--      android:layout_marginTop="20dp"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content" />-->
+
+<!--  <RelativeLayout-->
+<!--      android:id="@+id/layout_button_choose_front"-->
+<!--      android:gravity="center"-->
+<!--      android:background="@drawable/button_choose_photo"-->
+<!--      android:layout_alignParentBottom="true"-->
+<!--      android:padding="15dp"-->
+<!--      android:layout_alignParentLeft="true"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_centerVertical="true">-->
+
+<!--    <TextView-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="19dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:paddingLeft="15dp"-->
+<!--        android:paddingRight="15dp"-->
+<!--        android:textColor="@color/colorLogoBlack"-->
+<!--        android:background="@drawable/custom_button"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:id="@+id/select_photo_front"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:text="@string/select_a_photo" />-->
+<!--  </RelativeLayout>-->
+  <LinearLayout
+      android:id="@+id/btn_next_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_centerHorizontal="true"
+      android:gravity="center"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="30dp"
+      android:orientation="vertical">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:elevation="2dp"
+        app:backgroundTint="@color/colorLogoBlack"
+        android:id="@+id/button_next_front"
+
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/layout_button_choose"
+        android:tint="@color/colorWhite"
+        android:src="@drawable/ic_arrow_right"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_5"
+        android:padding="@dimen/margin_2"
+        android:textStyle="bold"
+        android:textSize="@dimen/margin_15"
+        android:text="@string/next_small"/>
+  </LinearLayout>
+  <TextView
+      android:textStyle="bold"
+      android:layout_marginTop="19dp"
+      android:gravity="center"
+      android:layout_marginBottom="0dp"
+      android:paddingLeft="15dp"
+      android:layout_above="@+id/btn_next_layout"
+      android:paddingRight="15dp"
+      android:textColor="@color/colorLogoBlack"
+      android:background="@drawable/custom_button"
+      android:id="@+id/select_photo_front"
+      android:layout_centerHorizontal="true"
+      android:layout_width="wrap_content"
+      android:layout_height="45dp"
+      android:text="@string/select_a_photo" />
+</RelativeLayout>

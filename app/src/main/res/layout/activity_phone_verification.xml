@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/,tools"
+        android:layout_width="match_parent"
+        app:cardElevation="8dp"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".activity.PhoneVerification">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/response_message_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorRed"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/phone_verification_layout"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <!--            <EditText-->
+                        <!--                android:maxLength="15"-->
+                        <!--                android:drawableTint="@color/colorLogoBlack"-->
+                        <!--                android:drawableEnd="@drawable/ic_phone_outline"-->
+                        <!--                android:textSize="16sp"-->
+                        <!--                android:layout_weight="1"-->
+                        <!--                android:id="@+id/getphone"-->
+                        <!--                android:layout_width="match_parent"-->
+                        <!--                android:layout_height="wrap_content"-->
+                        <!--                android:inputType="phone"-->
+                        <!--                android:hint="@string/phone" />-->
+                        <com.goodiebag.pinview.Pinview
+                            android:id="@+id/pinview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:pinWidth="30dp"
+                            app:pinHeight="30dp"
+                            app:pinLength="6"
+                            app:pinBackground="@drawable/pin_back"
+                            app:cursorVisible="true"
+                            app:forceKeyboard="true"
+                            app:hint="*"
+                            app:inputType="number"
+                            app:password="false"/>
+                        <TextView
+                            android:id="@+id/clear_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/clear_pin"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorBeforeClick"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp">
+                            <TextView
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:id="@+id/send_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/custom_button"
+                                android:text="@string/send_verification_code"
+                                android:textColor="@color/colorLogoBlack" />
+                            <TextView
+                                android:id="@+id/timer"
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:background="@drawable/custom_button"
+                                android:text="00:01"
+                                android:textColor="@color/colorLogoBlack" />
+                            <TextView
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:id="@+id/resend_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/custom_button"
+                                android:text="@string/resend_code"
+                                android:textColor="@color/colorLogoBlack" />
+                            <ProgressBar
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:id="@+id/progressBar_verify"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </FrameLayout>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/email_verification_layout"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:maxLength="12"
+                            android:drawableTint="@color/colorLogoBlack"
+                            android:drawableRight="@drawable/ic_password_outline"
+                            android:drawableEnd="@drawable/ic_password_outline"
+                            android:textSize="16sp"
+                            android:id="@+id/verify_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="@string/enter_code" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp">
+                            <TextView
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:id="@+id/send_code_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/custom_button"
+                                android:text="@string/send_verification_code"
+                                android:textColor="@color/colorLogoBlack" />
+                            <TextView
+                                android:id="@+id/timer_email"
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:background="@drawable/custom_button"
+                                android:text="00:01"
+                                android:textColor="@color/colorLogoBlack" />
+                            <TextView
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:id="@+id/resend_code_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/custom_button"
+                                android:text="@string/resend_code"
+                                android:textColor="@color/colorLogoBlack" />
+                            <ProgressBar
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:id="@+id/progressBar_verify_email"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </FrameLayout>
+
+
+
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</layout>

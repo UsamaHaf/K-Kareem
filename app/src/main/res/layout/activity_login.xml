@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        tools:context="com.kreemcabs.mytaxidriver.canvasolutions.kreemcabs.mytaxidriver.activity.LoginActivity"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginTop="5dp"
+                android:textSize="30sp"
+                android:textColor="@color/colorLogoBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_ndriver_information" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/country_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    app:ccp_showFlag="false"
+                    android:gravity="bottom"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_areaCodeDetectedCountry="false"
+                    android:layout_gravity="bottom|center_horizontal"
+                    app:ccpDialog_allowSearch="true"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showFullName="false"
+                    app:ccp_showPhoneCode="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:focusable="true"
+                    app:ccp_autoDetectLanguage="true"
+                    android:focusedByDefault="true"
+                    app:ccpDialog_showFlag="false"
+                    app:ccpDialog_showCloseIcon="false"
+                    app:ccpDialog_textColor="@color/colorBlack"
+                    app:ccp_textSize="16sp"
+                    app:ccpDialog_keyboardAutoPopup="false"
+                    app:ccpDialog_background="@color/white"
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:maxLength="15"
+                        android:drawableTint="@color/colorLogoBlack"
+                        android:drawableEnd="@drawable/ic_phone_outline"
+                        android:textSize="16sp"
+                        android:id="@+id/input_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:hint="@string/phone" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:maxLength="12"
+                        android:drawableTint="@color/colorLogoBlack"
+                        android:drawableRight="@drawable/ic_password_outline"
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="left">
+
+
+                <TextView
+                    android:textStyle="normal"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="45dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button"
+                    android:text="@string/log_in"
+                    android:textColor="@color/colorLogoBlack"
+                    android:layout_above="@+id/creer_compte"/>
+
+<!--                <TextView-->
+<!--                    android:textStyle="normal"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingLeft="15dp"-->
+<!--                    android:paddingRight="15dp"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:background="@drawable/custom_button_second"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:id="@+id/create_customer_account"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:text="@string/create_customer_account" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        android:layout_gravity="end"
+                        android:text="@string/don_t_have_account" />
+                    <TextView
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:textColor="@drawable/clickable_text_back"
+                        android:id="@+id/create_driver_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginStart="3dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        android:layout_gravity="end"
+                        android:text="@string/register" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/forget_password"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@drawable/clickable_text_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:text="@string/forgot_your_password" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/relativeLayout"
+                    android:layout_toStartOf="@+id/relativeLayout">
+
+                    <View
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/line_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#aaaaaa"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeLayout">
+
+                    <TextView
+                        android:id="@+id/ou_connectez_vous"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ou connectez-vous avec" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/relativeLayout"
+                    android:layout_toEndOf="@+id/relativeLayout">
+
+                    <View
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dp"
+                        android:background="#aaaaaa"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                android:id="@+id/progressBar_login"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
